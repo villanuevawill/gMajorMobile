@@ -145,3 +145,121 @@
 2014-07-10 21:39:45.255 gMajor[1618:90b] Going to one
 2014-07-10 23:10:14.030 gMajor[1618:61bf] 23:10:14.030 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
 2014-07-10 23:10:15.205 gMajor[1618:9b07] 23:10:15.205 WARNING:   235: Default audio device changed. Restart the simulator to have it use the newly-selected device.
+2014-07-14 23:53:36.202 gMajor[28680:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-14 23:53:36.318 gMajor[28680:90b] Unlimited access to network resources
+2014-07-14 23:53:37.538 gMajor[28680:90b] [CDVTimer][keyboard] 0.086010ms
+2014-07-14 23:53:37.561 gMajor[28680:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-14 23:53:37.561 gMajor[28680:90b] [CDVTimer][statusbar] 0.429988ms
+2014-07-14 23:53:37.561 gMajor[28680:90b] [CDVTimer][TotalPluginStartup] 23.893952ms
+2014-07-14 23:53:37.929 gMajor[28680:90b] Resetting plugins due to page load.
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-14 23:53:39.432 gMajor[28680:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+2014-07-14 23:56:13.722 gMajor[29006:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-14 23:56:13.759 gMajor[29006:90b] Unlimited access to network resources
+2014-07-14 23:56:13.791 gMajor[29006:90b] [CDVTimer][keyboard] 0.067949ms
+2014-07-14 23:56:13.792 gMajor[29006:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-14 23:56:13.792 gMajor[29006:90b] [CDVTimer][statusbar] 0.472009ms
+2014-07-14 23:56:13.793 gMajor[29006:90b] [CDVTimer][TotalPluginStartup] 1.478016ms
+2014-07-14 23:56:13.980 gMajor[29006:90b] Resetting plugins due to page load.
+2014-07-14 23:56:14.446 gMajor[29006:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-14 23:56:31.949 gMajor[29006:90b] Going to grid
+2014-07-14 23:59:04.167 gMajor[29306:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-14 23:59:04.189 gMajor[29306:90b] Unlimited access to network resources
+2014-07-14 23:59:04.212 gMajor[29306:90b] [CDVTimer][keyboard] 0.091016ms
+2014-07-14 23:59:04.213 gMajor[29306:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-14 23:59:04.213 gMajor[29306:90b] [CDVTimer][statusbar] 0.494003ms
+2014-07-14 23:59:04.214 gMajor[29306:90b] [CDVTimer][TotalPluginStartup] 1.577973ms
+2014-07-14 23:59:04.432 gMajor[29306:90b] Resetting plugins due to page load.
+2014-07-14 23:59:04.878 gMajor[29306:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:01:31.046 gMajor[29586:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:01:31.229 gMajor[29586:90b] Unlimited access to network resources
+2014-07-15 00:01:31.320 gMajor[29586:90b] [CDVTimer][keyboard] 33.895016ms
+2014-07-15 00:01:31.320 gMajor[29586:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:01:31.321 gMajor[29586:90b] [CDVTimer][statusbar] 0.451028ms
+2014-07-15 00:01:31.321 gMajor[29586:90b] [CDVTimer][TotalPluginStartup] 35.372972ms
+2014-07-15 00:01:31.767 gMajor[29586:90b] Resetting plugins due to page load.
+2014-07-15 00:01:32.595 gMajor[29586:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+2014-07-15 00:01:32.706 gMajor[29586:90b] THREAD WARNING: ['Device'] took '14.916016' ms. Plugin should use a background thread.
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:03:41.189 gMajor[29863:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:03:41.208 gMajor[29863:90b] Unlimited access to network resources
+2014-07-15 00:03:41.239 gMajor[29863:90b] [CDVTimer][keyboard] 0.059009ms
+2014-07-15 00:03:41.239 gMajor[29863:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:03:41.240 gMajor[29863:90b] [CDVTimer][statusbar] 0.361025ms
+2014-07-15 00:03:41.240 gMajor[29863:90b] [CDVTimer][TotalPluginStartup] 1.285017ms
+2014-07-15 00:03:41.648 gMajor[29863:90b] Resetting plugins due to page load.
+2014-07-15 00:03:41.977 gMajor[29863:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+2014-07-15 00:04:25.455 gMajor[30109:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:04:25.470 gMajor[30109:90b] Unlimited access to network resources
+2014-07-15 00:04:25.494 gMajor[30109:90b] [CDVTimer][keyboard] 0.096023ms
+2014-07-15 00:04:25.494 gMajor[30109:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:04:25.497 gMajor[30109:90b] [CDVTimer][statusbar] 2.241015ms
+2014-07-15 00:04:25.498 gMajor[30109:90b] [CDVTimer][TotalPluginStartup] 3.893971ms
+2014-07-15 00:04:25.671 gMajor[30109:90b] Resetting plugins due to page load.
+2014-07-15 00:04:26.075 gMajor[30109:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:06:47.101 gMajor[30604:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:06:47.111 gMajor[30604:90b] Unlimited access to network resources
+2014-07-15 00:06:47.178 gMajor[30604:90b] [CDVTimer][keyboard] 0.108004ms
+2014-07-15 00:06:47.179 gMajor[30604:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:06:47.179 gMajor[30604:90b] [CDVTimer][statusbar] 0.518024ms
+2014-07-15 00:06:47.180 gMajor[30604:90b] [CDVTimer][TotalPluginStartup] 1.721025ms
+2014-07-15 00:06:47.298 gMajor[30604:90b] Resetting plugins due to page load.
+2014-07-15 00:06:47.748 gMajor[30604:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:07:44.254 gMajor[30872:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:07:44.279 gMajor[30872:90b] Unlimited access to network resources
+2014-07-15 00:07:44.301 gMajor[30872:90b] [CDVTimer][keyboard] 0.104010ms
+2014-07-15 00:07:44.302 gMajor[30872:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:07:44.303 gMajor[30872:90b] [CDVTimer][statusbar] 0.666976ms
+2014-07-15 00:07:44.303 gMajor[30872:90b] [CDVTimer][TotalPluginStartup] 2.013981ms
+2014-07-15 00:07:44.476 gMajor[30872:90b] Resetting plugins due to page load.
+2014-07-15 00:07:44.831 gMajor[30872:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:10:42.176 gMajor[31152:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:10:42.264 gMajor[31152:90b] Unlimited access to network resources
+2014-07-15 00:10:42.353 gMajor[31152:90b] [CDVTimer][keyboard] 0.097990ms
+2014-07-15 00:10:42.354 gMajor[31152:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:10:42.355 gMajor[31152:90b] [CDVTimer][statusbar] 0.550032ms
+2014-07-15 00:10:42.355 gMajor[31152:90b] [CDVTimer][TotalPluginStartup] 1.778007ms
+2014-07-15 00:10:42.555 gMajor[31152:90b] Resetting plugins due to page load.
+2014-07-15 00:10:43.784 gMajor[31152:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:14:02.736 gMajor[31488:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:14:02.812 gMajor[31488:90b] Unlimited access to network resources
+2014-07-15 00:14:02.844 gMajor[31488:90b] [CDVTimer][keyboard] 0.057995ms
+2014-07-15 00:14:02.845 gMajor[31488:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:14:02.845 gMajor[31488:90b] [CDVTimer][statusbar] 0.395000ms
+2014-07-15 00:14:02.845 gMajor[31488:90b] [CDVTimer][TotalPluginStartup] 1.313031ms
+2014-07-15 00:14:03.000 gMajor[31488:90b] Resetting plugins due to page load.
+2014-07-15 00:14:03.502 gMajor[31488:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:14:07.538 gMajor[31488:90b] 0
+2014-07-15 00:14:07.538 gMajor[31488:90b] 0.626938775510204
+2014-07-15 00:14:07.539 gMajor[31488:90b] 0
+2014-07-15 00:14:07.539 gMajor[31488:90b] 0.75
+2014-07-15 00:28:51.352 gMajor[32158:90b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 00:28:51.364 gMajor[32158:90b] Unlimited access to network resources
+2014-07-15 00:28:51.488 gMajor[32158:90b] [CDVTimer][keyboard] 0.087976ms
+2014-07-15 00:28:51.488 gMajor[32158:90b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-07-15 00:28:51.489 gMajor[32158:90b] [CDVTimer][statusbar] 0.442982ms
+2014-07-15 00:28:51.489 gMajor[32158:90b] [CDVTimer][TotalPluginStartup] 1.576006ms
+2014-07-15 00:28:51.675 gMajor[32158:90b] Resetting plugins due to page load.
+2014-07-15 00:28:52.941 gMajor[32158:90b] Finished load of: file:///Users/Will/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/37265345-B2F9-47A5-B3E9-8C95B80FF781/gMajor.app/www/index.html#/grid
+>>>> frameSizeChanged = 4096
+>>>> frameSizeChanged = 4096
+2014-07-15 00:28:57.735 gMajor[32158:90b] 0
+2014-07-15 00:28:57.736 gMajor[32158:90b] 0.626938775510204
+2014-07-15 00:28:57.736 gMajor[32158:90b] 0
+2014-07-15 00:28:57.737 gMajor[32158:90b] 0.75

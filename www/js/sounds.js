@@ -132,7 +132,7 @@ SoundBoard.prototype.playSounds = function( frequency, volume, start){
   osc.buffer = buffer;
   osc.loop = false;
   osc.connect(context.destination);
-  osc.noteOn(start);
+  osc.start(start);
 }
 
 SoundBoard.prototype.playInterval = function( MIDI ){
@@ -175,10 +175,10 @@ SoundBoard.prototype.playInterval = function( MIDI ){
 }
 
 
-var yo = new SoundBoard('piano', 120, [200, 300, 600, 350, 400]);
-yo.startClock();
-yo.playSounds(200, 1, 0);
-yo.playInterval([{}, {}, {}, {200:true, 400:true, 300:true, 600:true, 350:true}, {}, {}, {}, {400:true, 600:true}]);
+// var yo = new SoundBoard('piano', 120, [200, 300, 600, 350, 400]);
+// yo.startClock();
+// yo.playSounds(200, 1, 0);
+// yo.playInterval([{}, {}, {}, {200:true, 400:true, 300:true, 600:true, 350:true}, {}, {}, {}, {400:true, 600:true}]);
 
 //Below may be the correct version.
 // var currentCol = Math.ceil((currentTime - startTime - 1)) % (8 * this.BPM/60/2); 
