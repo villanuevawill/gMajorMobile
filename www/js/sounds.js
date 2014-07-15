@@ -1,14 +1,21 @@
 window.AudioContext = window.AudioContext||window.webkitAudioContext;
 var context = new AudioContext();
 
-var SoundBoard = function(){
+//scale needs to be an array of preset notes on the BPM scale.
+//single beat is 60/BPM seconds
 
-	//the sound hash holds previously calculated buffers.  In this case, we won't have to go through
-	// an array that spans 44,100 elements again.
+
+var SoundBoard = function(instrument, BPM, scale){
 
   this.sampleRate = 44100;
 
-	this.soundHash = {};
+  this.BPM = BPM;
+
+  this.instrument = instrument;
+
+  this.noteScheduler = [];
+
+  this.interval;
 
 	this.modules = [
   function(i, sampleRate, frequency, x) {
@@ -66,6 +73,29 @@ var SoundBoard = function(){
 
 // These functions shift, add noise, and character to the waveforms.  As a result, the instrument
 // sounds more realistic
+  this.soundHash = {};
+
+  var attackLen = this.sampleRate * this.Instruments[this.instrument].attack();
+
+
+  for ( var i = 0; i < scale.length; i++ ){
+    var buffer = context.createBuffer(1, duration * this.sampleRate, this.sampleRate);
+    data = buffer.getChannelData(0);
+    for (var j = 0; j < data.length; j++){
+      if ( j < attackLen){
+        amplitude = volume * (j/(this.sampleRate * this.Instruments[this.instrument].attack()))
+      }else{
+        amplitude = volume * Math.pow((1-((j-(this.sampleRate*this.Instruments[this.instrument].attack()))/(this.sampleRate*(duration-this.Instruments[this.instrument].attack())))),this.Instruments[this.instrument].dampen.call(this,this.sampleRate, frequency, volume))
+      }
+        val = amplitude * this.Instruments[this.instrument].wave.call(this, j, this.sampleRate, frequency, volume);
+        data[j<<1] = val;
+        data[(j<<1)+1] = val>> 8;
+
+        this.soundHash[ scale[j] ] = buffer;
+  }
+
+//the sound hash holds all the notes so we don't have to complete strenous calculations every time.
+
 
 }
 //Sample rate represents the array size that stores the amplitudes of the sound for the web Audio API.
@@ -73,11 +103,10 @@ var SoundBoard = function(){
 //at this spec
 //Volume is on a scale from 0 to 1
 
-SoundBoard.prototype.playSounds = function(Instrument, frequency, volume, duration, start){
-  var attackLen = this.sampleRate * this.Instruments[Instrument].attack();
+SoundBoard.prototype.playSounds = function( frequency, volume, start){
   //The web audio API contains buffers that can be evaluated as sound.  Below, we will fill this buffer
   //for the sound card to evaluate
-  var buffer = context.createBuffer(1, duration * this.sampleRate, this.sampleRate);
+  var duration = this.BPM/60;
   var osc = context.createBufferSource();
   var gainNode = context.createGain();
   gainNode.gain.value = volume;
@@ -88,34 +117,10 @@ SoundBoard.prototype.playSounds = function(Instrument, frequency, volume, durati
   //The code below represents the attack and decay functions for the wave.  A logarithmic/exponential
   //function is used for the decay. This gives the effect of lower notes lasting longer than
   //higher notes.  Pretty cool!!!
-  if (this.soundHash[Instrument] && this.soundHash[Instrument][frequency] && this.soundHash[Instrument][frequency][duration]){
-  	buffer = this.soundHash[Instrument][frequency][duration]
-  }else{
-  	data = buffer.getChannelData(0);
-    for (i = 0; i < data.length; i++){
-	    if ( i < attackLen){
-	      amplitude = volume * (i/(this.sampleRate * this.Instruments[Instrument].attack()))
-	    }else{
-	      amplitude = volume * Math.pow((1-((i-(this.sampleRate*this.Instruments[Instrument].attack()))/(this.sampleRate*(duration-this.Instruments[Instrument].attack())))),this.Instruments[Instrument].dampen.call(this,this.sampleRate, frequency, volume))
-	    }
-	      val = amplitude * this.Instruments[Instrument].wave.call(this, i, this.sampleRate, frequency, volume);
-	      if ( i === 4)
-	      	console.log(amplitude);
-   			data[i<<1] = val;
-    		data[(i<<1)+1] = val>> 8;
+	buffer = this.soundHash[frequency];
 
-  	}
-  	if (!this.soundHash[Instrument]){
-  		this.soundHash[Instrument] = {};
-  	}
-  	if (!this.soundHash[Instrument][frequency]){
-  		this.soundHash[Instrument][frequency] = {};
-  	}
-  	this.soundHash[Instrument][frequency][duration] = buffer;
-  }
-
-  //If you have quesitons on this function, let me know.  Otherwise, you won't need to alter it at all.
-  //Think of the web Audio API as a simple instrument to speaker connection.  The source(buffer source),
+  //If you have questions on this function, let me know.  Otherwise, you won't need to alter it at all.
+  //Think of the web Audio API as a simple insrument to speaker connection.  The source(buffer source),
   //acts like the guitar.  The context.destination is the speaker (see below).  Otherwise,
   //all the nodes in-between would be like a filter, or pedal you might connect to an electric guitar.
   osc.buffer = buffer;
@@ -123,3 +128,29 @@ SoundBoard.prototype.playSounds = function(Instrument, frequency, volume, durati
   osc.connect(context.destination);
   osc.noteOn(start);
 }
+
+SoundBoard.prototype.playInterval = function( MIDI ){
+  var startTime = context.currentTime;
+  var halfwayPointBetweenNotes = this.BMP/60/2/2;
+
+
+  var loop = function( MIDI, startTime, halfwayPointBetweenNotes, firstTime ){
+    firstTime = firstTime || 0;
+    this.interval = setTimeout(function( MIDI, startTime ){
+      var currentTime = context.currentTime;
+      var currentCol = Math.ceil((currentTime - startTime - 1)) % (8 * this.BPM/60/2); 
+      var numberOfCycles = Math.floor((currentTime - startTime - 1)/(this.BPM/60/2))
+      var scheduledTime = ((numberOfCycles * ( this.BPM/60/2 + 1 )) + startTime + ((currentCol + 1) * BPM/60/2))
+      for (var note in this.noteScheduler[currentCol]){
+        if ( this.noteScheduler[currentCol][note] )
+        this.playSounds( note, 1, scheduledTime )
+      }
+      loop( MIDI, startTime, halfwayPointBetweenNotes, (scheduledTime + halfwayPointBetweenNotes));
+    }, firstTime )
+  }
+// first it needs to evaluate the array.  It will need to set up a setTimeout()
+
+}
+
+
+
