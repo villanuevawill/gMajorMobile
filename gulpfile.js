@@ -31,19 +31,24 @@ gulp.task('sass', function(done) {
 gulp.task('audio', function(){
   gulp.src(paths.audio)
     .pipe(concat('sounds.js'))
-    .pipe(gulp.dest('www/js/'));
+    .pipe(gulp.dest('www/js/build/'));
 });
 
 gulp.task('dependencies', function(){
   gulp.src(paths.dependencies)
     .pipe(concat('dependencies.js'))
-    .pipe(gulp.dest('www/js/'));
+    .pipe(gulp.dest('www/js/build/'));
 });
 
 
 
 gulp.task('serve-ionic', sh.task([
   'ionic serve'
+]));
+
+
+gulp.task('emulate-ios', sh.task([
+    'ionic emulate ios'
 ]));
 
 gulp.task('watch', function() {
@@ -72,4 +77,5 @@ gulp.task('git-check', function(done) {
   done();
 });
 
+gulp.task('emulate', ['audio', 'dependencies', 'emulate-ios']);
 gulp.task('default', ['audio','dependencies', 'serve-ionic', 'watch']);
