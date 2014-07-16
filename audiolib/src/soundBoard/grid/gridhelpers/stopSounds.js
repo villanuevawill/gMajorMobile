@@ -1,3 +1,3 @@
-Grid.prototype.stopSounds = function(){
+SoundBoard.prototype.stopSounds = function(){
   clearInterval(this.interval);
 };
